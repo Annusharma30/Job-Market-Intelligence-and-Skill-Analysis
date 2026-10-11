@@ -1,39 +1,40 @@
-# 🇮🇳 India Job Market Intelligence & Skill Analysis
+# India Job Market Intelligence and Skill Analysis
 
-A data-driven analysis of India's technology job market using **Python, Pandas, Excel, and Power BI** to understand hiring demand, skill trends, salaries, companies, and geographic opportunities.
+An end-to-end data analytics project exploring India's job market, in-demand skills, salary trends, hiring patterns, and fresher opportunities using Python, statistical analysis, data visualization, and Power BI.
 
-## 📊 Project Highlights
+## Project Objectives
 
-- **97,929** raw job postings
-- **32,438** technology-related records
-- **241,109** skill mentions
-- **18,702** unique skills
-- **6,482** companies
-- **428** cities
+- Analyze in-demand technical skills across job postings.
+- Explore salary trends across job roles and cities.
+- Investigate fresher opportunities and experience requirements.
+- Examine relationships between skills, salaries, and hiring patterns.
+- Present insights through visualizations, reports, and dashboards.
 
-## 🎯 Key Analysis
+## Tools and Technologies
 
-- Technology job demand by role and city
-- Top in-demand technical skills
-- Skill requirements across different roles
-- Salary disclosure and median salary analysis
-- Company and geographic hiring patterns
-- Experience-level analysis
+- **Programming:** Python, SQL
+- **Data Analysis:** Pandas, NumPy, statistical analysis
+- **Visualization:** Matplotlib, Power BI
+- **Environment:** Jupyter Notebook, Git, GitHub
 
-## 📈 Power BI Dashboard
+## Repository Structure
 
-The interactive dashboard includes:
+- `data/raw/` — Original job market dataset
+- `data/processed/` — Cleaned and analysis-ready datasets
+- `docs/` — Project methodology and documentation
+- `notebooks/` — Data understanding, cleaning, exploratory analysis, and statistical analysis
+- `outputs/charts/` — Generated visualizations
+- `outputs/reports/` — Executive insights
+- `outputs/tables/` — Analysis tables
+- `powerbi/` — Power BI-related files
 
-- **Executive Overview** — Market KPIs and job distribution
-- **Skill Intelligence** — Top skills and skill-role analysis
-- **Salary Intelligence** — Salary and disclosure analysis
-- **Geographic Analysis** — City and location-level insights
+## Getting Started
 
-## 🛠️ Tech Stack
+1. Clone or download this repository.
+2. Install the required Python packages.
+3. Open the notebooks in the `notebooks/` directory in numerical order.
+4. Review the charts and reports in the `outputs/` directory.
 
-**Python | Pandas | NumPy | Excel | Power BI | DAX | Git/GitHub**
+## Data Note
 
-## 🔄 Workflow
-
-```text
-Raw Data → Cleaning → EDA → Feature Engineering → Power BI → Insights
+The findings reflect the supplied dataset and its coverage. They should not be interpreted as a complete representation of the entire Indian job market.
