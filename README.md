@@ -51,21 +51,37 @@ Version Control	Git, GitHub
 india-tech-talent-intelligence-2026/ │ ├── 📁 data/ │ ├── raw/ ← Original dataset (not tracked) │ ├── processed/ ← Cleaned CSVs │ └── external/ ← Reference data │ ├── 📁 notebooks/ │ ├── 01_data_understanding.ipynb │ ├── 02_data_cleaning.ipynb │ ├── 03_exploratory_analysis.ipynb │ ├── 04_statistical_analysis.ipynb │ └── 05_advanced_analytics.ipynb │ ├── 📁 outputs/ │ ├── charts/ ← 25 analysis charts (PNG) │ ├── tables/ ← Key result tables (CSV) │ └── reports/ ← Executive insights (MD) │ ├── 📁 powerbi/ ← Dashboard (.pbix + screenshots) ├── 📁 scripts/ ← Reusable Python functions ├── 📁 sql/ ← SQL analysis queries └── 📁 docs/ ← Methodology & data dictionary
 
 📊 Key Charts
-Top 25 In-Demand Tech Skills
-outputs/charts/A1_top25_skills_demand.png
+## Top 25 In-Demand Skills
 
-Fresher Opportunity Index by City
-outputs/charts/C3_fresher_opportunity_index.png
+[![Top 25 In-Demand Skills](./outputs/charts/A1_top_skills.png)](./outputs/charts/A1_top_skills.png)
 
-Salary Growth by Experience
-outputs/charts/F3_experience_salary_regression.png
+[View full-size chart](./outputs/charts/A1_top_skills.png)
 
-Career Path Map
-outputs/charts/G2_career_path_map.png
+
+### Fresher Opportunity Index by City
+
+[![Fresher Opportunity Index by City](outputs/charts/C3_fresher_opportunity_index.png)](outputs/charts/C3_fresher_opportunity_index.png)
+
+[View Full-Size Chart](outputs/charts/C3_fresher_opportunity_index.png)
+
+
+### Salary Growth by Experience
+
+[![Salary Growth by Experience](outputs/charts/F3_experience_salary_regression.png)](outputs/charts/F3_experience_salary_regression.png)
+
+[View Full-Size Chart](outputs/charts/F3_experience_salary_regression.png)
+
+
+
+### Career Path Map
+
+[![Career Path Map](outputs/charts/G2_career_path_map.png)](outputs/charts/G2_career_path_map.png)
+
+[View Full-Size Chart](outputs/charts/G2_career_path_map.png)
+
 
 Dataset Setup
-Download the dataset from Kaggle:
-https://www.kaggle.com/datasets/shivamshrivastava21/indian-job-market-dataset-2025-2026
+[Download Dataset from Kaggle](https://www.kaggle.com/datasets/shivamshrivastava21/indian-job-market-dataset-2025-2026)
 Place india_job_market_2025.csv in data/raw/
 
 Run Notebooks in Order
