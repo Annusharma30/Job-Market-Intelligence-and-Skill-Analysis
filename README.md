@@ -1,40 +1,117 @@
-# India Job Market Intelligence and Skill Analysis
+📊 Project Overview
+India's tech hiring ecosystem lacks a centralized, data-driven intelligence layer connecting real-time skill demand signals with salary benchmarks, geographic talent distribution, and fresher employability metrics. This platform transforms raw job market data into actionable intelligence for both hiring managers and fresh graduates.
 
-An end-to-end data analytics project exploring India's job market, in-demand skills, salary trends, hiring patterns, and fresher opportunities using Python, statistical analysis, data visualization, and Power BI.
+Dataset: Naukri.com India Job Market 2025-26 (Kaggle)
+Raw Records: 97,929 job postings
+Tech Records: 32,438 (after classification)
+Skill Mentions: 241,109 across 18,702 unique skills
+Companies: 6,482
+Cities: 428
 
-## Project Objectives
+🔑 Top 10 Findings
+#	Finding	Key Number
+1	Python leads India's tech skill demand	15.3% of all postings
+2	Only 1 in 5 tech roles is fresher-eligible	20.21% (6,556 postings)
+3	Hyderabad & Bengaluru offer statistically equal salaries	p = 0.474
+4	Senior tech roles pay 4.2x more than junior roles	₹25 vs ₹5.9 LPA
+5	Generative AI commands highest salary premium	+150% above median
+6	Accenture is India's largest fresher employer	1,088 fresher postings
+7	Tech hiring drops 97% on weekends	157 vs 5,712 peak day
+8	Spring Boot + Microservices is India's tightest skill pair	Jaccard 0.41
+9	Skill count has no significant salary correlation	r = 0.020, p = 0.109
+10	No Indian city achieves Top-Tier FOI score	Best: Bengaluru = 56.5/100
 
-- Analyze in-demand technical skills across job postings.
-- Explore salary trends across job roles and cities.
-- Investigate fresher opportunities and experience requirements.
-- Examine relationships between skills, salaries, and hiring patterns.
-- Present insights through visualizations, reports, and dashboards.
+🗺️ Fresher Opportunity Index (FOI)
+The FOI is an original composite metric developed for this project that ranks Indian cities for fresh graduate tech opportunities:
 
-## Tools and Technologies
+FOI = Entry-level ratio (40%)
 
-- **Programming:** Python, SQL
-- **Data Analysis:** Pandas, NumPy, statistical analysis
-- **Visualization:** Matplotlib, Power BI
-- **Environment:** Jupyter Notebook, Git, GitHub
+Salary competitiveness (30%)
+Market depth (20%)
+Work flexibility (10%)
+Rank	City	FOI Score	Tech Jobs	Fresher %	Median Salary
+🥇 1	Bengaluru	56.5	9,358	17%	₹13.2 LPA
+🥇 1	Hyderabad	56.5	5,502	14%	₹13.5 LPA
+🥉 3	Mohali	49.6	122	47%	₹6.5 LPA
+4	Gurugram	49.5	1,319	24%	₹10.5 LPA
+5	Thane	48.5	148	44%	₹6.6 LPA
 
-## Repository Structure
+🛠️ Tech Stack
+Layer	Tools Used
+Data Collection	Kaggle (Naukri.com scrape)
+Data Cleaning	Python, Pandas, NumPy, Regex
+Exploratory Analysis	Pandas, Matplotlib, Seaborn, Plotly
+Statistical Analysis	SciPy (Mann-Whitney U, Pearson, Spearman)
+Advanced Analytics	Jaccard Similarity, Composite Scoring
+Visualization	Matplotlib (25 charts), Power BI (4-page dashboard)
+Documentation	Markdown, Jupyter Notebooks
+Version Control	Git, GitHub
 
-- `data/raw/` — Original job market dataset
-- `data/processed/` — Cleaned and analysis-ready datasets
-- `docs/` — Project methodology and documentation
-- `notebooks/` — Data understanding, cleaning, exploratory analysis, and statistical analysis
-- `outputs/charts/` — Generated visualizations
-- `outputs/reports/` — Executive insights
-- `outputs/tables/` — Analysis tables
-- `powerbi/` — Power BI-related files
+📁 Project Structure
+india-tech-talent-intelligence-2026/ │ ├── 📁 data/ │ ├── raw/ ← Original dataset (not tracked) │ ├── processed/ ← Cleaned CSVs │ └── external/ ← Reference data │ ├── 📁 notebooks/ │ ├── 01_data_understanding.ipynb │ ├── 02_data_cleaning.ipynb │ ├── 03_exploratory_analysis.ipynb │ ├── 04_statistical_analysis.ipynb │ └── 05_advanced_analytics.ipynb │ ├── 📁 outputs/ │ ├── charts/ ← 25 analysis charts (PNG) │ ├── tables/ ← Key result tables (CSV) │ └── reports/ ← Executive insights (MD) │ ├── 📁 powerbi/ ← Dashboard (.pbix + screenshots) ├── 📁 scripts/ ← Reusable Python functions ├── 📁 sql/ ← SQL analysis queries └── 📁 docs/ ← Methodology & data dictionary
 
-## Getting Started
+📊 Key Charts
+Top 25 In-Demand Tech Skills
+outputs/charts/A1_top25_skills_demand.png
 
-1. Clone or download this repository.
-2. Install the required Python packages.
-3. Open the notebooks in the `notebooks/` directory in numerical order.
-4. Review the charts and reports in the `outputs/` directory.
+Fresher Opportunity Index by City
+outputs/charts/C3_fresher_opportunity_index.png
 
-## Data Note
+Salary Growth by Experience
+outputs/charts/F3_experience_salary_regression.png
 
-The findings reflect the supplied dataset and its coverage. They should not be interpreted as a complete representation of the entire Indian job market.
+Career Path Map
+outputs/charts/G2_career_path_map.png
+
+Dataset Setup
+Download the dataset from Kaggle:
+https://www.kaggle.com/datasets/shivamshrivastava21/indian-job-market-dataset-2025-2026
+Place india_job_market_2025.csv in data/raw/
+
+Run Notebooks in Order
+# Open Jupyter
+jupyter notebook
+
+# Run in this sequence:
+# 01_data_understanding.ipynb
+# 02_data_cleaning.ipynb
+# 03_exploratory_analysis.ipynb
+# 04_statistical_analysis.ipynb
+# 05_advanced_analytics.ipynb
+
+📋 Business Questions Answered
+This project answers 30 business questions across 5 domains:
+
+Skill Intelligence: Which skills are most demanded? Which skills co-occur most frequently? What is the minimum viable fresher skill set?
+
+Salary Intelligence: Which roles pay the most? Which cities offer the highest salaries? Which skills command salary premiums?
+
+Location Intelligence: Which cities have the most tech jobs? Which cities are best for freshers? What is the work mode split?
+
+Role Intelligence: Which roles are growing fastest? Which are most accessible to freshers? What is the career path salary curve?
+
+Company Intelligence: Who are the top hirers? Which companies hire the most freshers? How does company rating relate to salary?
+
+📌 Data Cleaning Highlights
+Removed 571 rows with systemic scraping failures
+Resolved 247 full duplicate records
+Built keyword-based tech role classifier (v3, ~90% precision)
+Extracted primary_city from 10,066 unique location strings
+Normalized 18,702 raw skill variants into canonical forms
+Identified and corrected 87 monthly-to-annual salary anomalies
+Final dataset: 32,438 tech postings, 0.84% removal rate
+
+🔮 Future Enhancements
+ Real-time data pipeline using Naukri API
+ NLP-based skill extraction from job descriptions
+ Salary prediction ML model (Random Forest)
+ Interactive web dashboard (Streamlit)
+ Time-series trend analysis with monthly scrapes
+ Resume-to-job-match scoring system
+
+ 👤 About
+Annu Sharma — Bsc. Data Science, Asansol Engineering College
+Seeking roles in Data Analytics, Business Analysis, and AI
+
+
+
